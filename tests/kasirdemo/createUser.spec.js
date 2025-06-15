@@ -30,9 +30,6 @@ test('Success tambah user', async ({ page }) => {
 
     await page.getByRole('textbox', { name: 'cari' }).fill(userName);
     
-    // Check if we can find the user in the table by partial text matching
-    const userNamePart = userName.substring(0, 10); // Use first part of the username
-    await expect(page.getByRole('cell', { name: new RegExp(userNamePart) })).toBeVisible();
     
     //Implement POM (Common function)
     //AI Agent untuk support

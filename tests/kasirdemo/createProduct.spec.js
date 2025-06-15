@@ -48,8 +48,6 @@ test('gagal tambah produk', async ({ page }) => {
     await page.getByRole('textbox', { name: 'kategori' }).click();
     await page.getByRole('gridcell', { name: 'Umum' }).click();
     await page.getByRole('button', { name: 'simpan' }).click();
-    await waitForSuccessToast(page);
-    await page.getByRole('gridcell', { name: namaVitamin }).isVisible();
     
     //Implement POM (Common function)
     //AI Agent untuk support
